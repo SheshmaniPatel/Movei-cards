@@ -1,9 +1,11 @@
- 
+import MovieCard from "./MovieCard";
 
-function App() {
-  return (
-     <h1>Welcome to movei App</h1>
-  );
+export default function App(){
+  return(
+    <>
+    <h1>Movie App</h1>
+    <MovieCard />
+    </>
+
+  )
 }
-
-export default App;
