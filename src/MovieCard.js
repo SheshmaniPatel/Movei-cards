@@ -9,31 +9,44 @@ class MovieCard extends React.Component {
       price: 399,
       rating: 8.9,
       starscount: 0,
+      fav: false,
+      cart:false,
     };
   }
   Decrease = () => {
-    if(this.state.starscount<=0){
-      return
+    if (this.state.starscount <= 0) {
+      return;
     }
-    this.setState((prevState)=>{
-      return{
-        starscount:prevState.starscount-0.5
-      }
-    })
+    this.setState((prevState) => {
+      return {
+        starscount: prevState.starscount - 0.5,
+      };
+    });
   };
   Increase = () => {
-    if(this.state.starscount>=5){
-      return
+    if (this.state.starscount >= 5) {
+      return;
     }
-    this.setState((prevState)=>{
-      return{
-        starscount:prevState.starscount+0.5
-      }
-    })
+    this.setState((prevState) => {
+      return {
+        starscount: prevState.starscount + 0.5,
+      };
+    });
+  };
+
+  handlefav = () => {
+    this.setState( {
+      fav: !this.state.fav
+    });
+  };
+  handlecart = () => {
+    this.setState( {
+      cart: !this.state.cart
+    });
   };
 
   render() {
-    const { title, plot, price, rating, starscount } = this.state;
+    const { title, plot, price, rating, starscount, fav,cart } = this.state;
     return (
       <div className="main">
         {/**Movie Card */}
@@ -80,8 +93,17 @@ class MovieCard extends React.Component {
               </div>
 
               {/**Favourite and add to cart buttons */}
-              <button className="favourite-btn">Favourite</button>
-              <button className="cart-btn">Add to Cart</button>
+              {fav ? (
+                <button className="unfavourite-btn" onClick={this.handlefav}>
+                  Un-favourite
+                </button>
+              ) : (
+                <button className="favourite-btn" onClick={this.handlefav}>
+                  Favourite
+                </button>
+              )}
+
+              <button  className={cart?"cart-btn":"remove-cart"} onClick={this.handlecart}>{cart?"Add to cart":"Remove from cart"}</button>
             </div>
           </div>
         </div>
