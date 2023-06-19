@@ -32,12 +32,24 @@ class MovieList extends React.Component {
         },
         {
           id: 3,
-          title: "Thor the dark world",
+          title: "Thor Love and Thunder",
           plot: "A hero who have the power of strength,stamina, fly with lightspeed,and sharp mind",
-          price: 249,
+          price: 349,
           poster:
-            " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKoBFZLxv9of2RVjqLT6NwiFkjgrnDbrmT5ERTAU0&s ",
-          rating: 8.9,
+            " https://cdn.marvel.com/content/1x/bigsalad_genavailposter_pay1_presunrise_v3_lg.jpg",
+          rating: 9.9,
+          starscount: 0,
+          fav: false,
+          cart: true,
+        },
+        {
+          id: 4,
+          title: " SPIDER-MAN No Way Home",
+          plot: "A hero who have the power of spider,and have the sixth sense with great humor !",
+          price: 299,
+          poster:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrdPsGJEBxBev7gKo_EMp0Pgk7Q7su_xTUxf3vo8dE9S_CiG2Z",
+          rating: 7.9,
           starscount: 0,
           fav: false,
           cart: true,
