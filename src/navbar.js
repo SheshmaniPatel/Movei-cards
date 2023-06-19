@@ -31,7 +31,7 @@ margin-top: 10px;
 `;
 
 const CartCount =styled.span`
-background-color: orange;
+background-color:  ${(props)=>props.color};
 border-radius: 50%;
 padding: 4px 8px;
 position: absolute;
@@ -54,7 +54,7 @@ class Navbar extends React.Component {
               alt="cart icon"
               src="https://cdn-icons-png.flaticon.com/256/3144/3144456.png"
             />
-            <CartCount>3</CartCount>
+            <CartCount color="red">3</CartCount>
           </CartContainer>
         </Nav>
       </>
