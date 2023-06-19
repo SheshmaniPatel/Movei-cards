@@ -43,42 +43,68 @@ class MovieList extends React.Component {
     };
   }
 
-  handleIncStar = (movie) =>{
-    const {movies}=this.state;
+  handleIncStar = (movie) => {
+    const { movies } = this.state;
 
-    const movieid=movies.indexOf(movie);
+    const movieid = movies.indexOf(movie);
 
-    if(movies[movieid].starscount>=5){
-        return
+    if (movies[movieid].starscount >= 5) {
+      return;
     }
-    movies[movieid].starscount +=0.5;
+    movies[movieid].starscount += 0.5;
 
     this.setState({
-        movies:movies
-    })
-  }
-  handleDecStar = (movie) =>{
-    const {movies}=this.state;
+      movies: movies,
+    });
+  };
+  handleDecStar = (movie) => {
+    const { movies } = this.state;
 
-    const movieid=movies.indexOf(movie);
+    const movieid = movies.indexOf(movie);
 
-    if(movies[movieid].starscount<=0){
-        return
+    if (movies[movieid].starscount <= 0) {
+      return;
     }
-    movies[movieid].starscount -=0.5;
+    movies[movieid].starscount -= 0.5;
 
     this.setState({
-        movies:movies
-    })
-  }
+      movies: movies,
+    });
+  };
+
+  handleToggleFav = (movie) => {
+    const { movies } = this.state;
+    const movieid = movies.indexOf(movie);
+    movies[movieid].fav = !movies[movieid].fav;
+
+    this.setState({
+      movies,
+    });
+  };
+  handleToggleCart = (movie) => {
+    const { movies } = this.state;
+    const movieid = movies.indexOf(movie);
+    movies[movieid].cart = !movies[movieid].cart;
+
+    this.setState({
+      movies,
+    });
+  };
 
   render() {
     // const{title,plot,price,rating,starscount,fav,cart}=this.state;
-    const {movies}=this.state;
+    const { movies } = this.state;
     return (
       <>
-    {movies.map((movie)=><MovieCard movies={movie } addStars={this.handleIncStar} removeStars={this.handleDecStar} />)}
-        
+        {movies.map((movie) => (
+          <MovieCard
+            movies={movie}
+            addStars={this.handleIncStar}
+            removeStars={this.handleDecStar}
+            toogleFav={this.handleToggleFav}
+            toogleCart={this.handleToggleCart}
+          />
+        ))}
       </>
     );
   }
