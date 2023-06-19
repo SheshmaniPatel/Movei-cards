@@ -7,7 +7,7 @@ class MovieList extends React.Component {
     this.state = {
       movies: [
         {
-          id:1,
+          id: 1,
           title: "Avatar",
           plot: "Totally icredeble 3D moveie ever , fun , journey , VFX .",
           price: 399,
@@ -19,7 +19,7 @@ class MovieList extends React.Component {
           cart: true,
         },
         {
-          id:2,
+          id: 2,
           title: "Avengers",
           plot: "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity",
           price: 299,
@@ -31,7 +31,7 @@ class MovieList extends React.Component {
           cart: true,
         },
         {
-          id:3,
+          id: 3,
           title: "Thor the dark world",
           plot: "A hero who have the power of strength,stamina, fly with lightspeed,and sharp mind",
           price: 249,
