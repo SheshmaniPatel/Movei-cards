@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const Nav = styled.div`
@@ -45,26 +44,24 @@ const CartCount = styled.span`
   font-size: 12px;
 `;
 
-class Navbar extends React.Component {
-  render() {
-    const { cartCount } = this.props;
+function Navbar(props) {
+  const { cartCount } = props;
 
-    return (
-      <>
-        <Nav>
-          <Title>MOVIE-APP</Title>
+  return (
+    <>
+      <Nav>
+        <Title>MOVIE-APP</Title>
 
-          <CartContainer>
-            <CartIcon
-              alt="cart icon"
-              src="https://cdn-icons-png.flaticon.com/256/3144/3144456.png"
-            />
-            <CartCount color="red">{cartCount}</CartCount>
-          </CartContainer>
-        </Nav>
-      </>
-    );
-  }
+        <CartContainer>
+          <CartIcon
+            alt="cart icon"
+            src="https://cdn-icons-png.flaticon.com/256/3144/3144456.png"
+          />
+          <CartCount color="red">{cartCount}</CartCount>
+        </CartContainer>
+      </Nav>
+    </>
+  );
 }
 
 export default Navbar;
