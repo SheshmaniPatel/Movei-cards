@@ -65,7 +65,7 @@ class MovieCard extends React.Component {
                 className={cart ? "cart-btn" : "remove-cart"}
                 onClick={()=>{ toogleCart( movies)}}
               >
-                {cart ? "Add to cart" : "Remove from cart"}
+                {cart ? "Remove from cart":"Add to cart"}
               </button>
             </div>
           </div>

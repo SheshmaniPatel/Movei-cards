@@ -9,7 +9,7 @@ export const movies=[
       rating: 8.9,
       starscount: 0,
       fav: false,
-      cart: true,
+      cart: false,
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ export const movies=[
       rating: 7.9,
       starscount: 0,
       fav: false,
-      cart: true,
+      cart: false,
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ export const movies=[
       rating: 9.9,
       starscount: 0,
       fav: false,
-      cart: true,
+      cart: false,
     },
     {
       id: 4,
@@ -45,6 +45,6 @@ export const movies=[
       rating: 7.9,
       starscount: 0,
       fav: false,
-      cart: true,
+      cart: false,
     },
   ]
